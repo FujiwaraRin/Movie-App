@@ -24,7 +24,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-
+import { upcomingMovies,popularMovies, searchMovies } from './src/api/apicalls';
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
@@ -62,6 +62,7 @@ function App(): React.JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  console.log(searchMovies('Avenger'));
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
